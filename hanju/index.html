@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>韩剧必胜园地-韩剧推荐观看指南与剧集资讯交流社区</title>
+<meta name="description" content="韩剧必胜园地是韩剧爱好者聚集的推荐与交流站点，提供韩剧类型分类、热播剧推荐、追剧攻略、演员与剧集资讯以及观剧常见问题解答，帮助你高效找到想看的韩剧。">
+<meta name="keywords" content="韩剧必胜园地,韩剧推荐,韩剧观看指南,韩剧资讯,韩剧分类,追剧攻略">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --main:#e0457b;
+  --main-dark:#b8285c;
+  --main-soft:#fde8ef;
+  --ink:#241f26;
+  --ink-2:#5b5560;
+  --line:#f0e2e7;
+  --bg:#fffafc;
+  --card:#ffffff;
+  --accent:#5a3fb8;
+  --accent-soft:#eee9fb;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(190,60,110,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,250,252,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:14px 0;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:44px;height:44px;border-radius:13px;flex:none;
+  background:linear-gradient(135deg,#ff7fae,#e0457b 55%,#7a3fd0);
+  color:#fff;font-weight:800;font-size:19px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 16px rgba(224,69,123,.32);
+  letter-spacing:-1px;
+}
+.brand-text b{display:block;font-size:19px;letter-spacing:.5px;}
+.brand-text span{display:block;font-size:12px;color:var(--ink-2);letter-spacing:1.5px;}
+
+.main-nav ul{display:flex;gap:6px;flex-wrap:wrap;}
+.main-nav a{
+  display:block;padding:8px 14px;border-radius:999px;
+  font-size:15px;color:var(--ink-2);transition:.22s;
+}
+.main-nav a:hover,.main-nav a.active{
+  background:var(--main-soft);color:var(--main-dark);font-weight:600;
+}
+.header-cta{
+  padding:9px 20px;border-radius:999px;font-size:14px;font-weight:600;
+  background:var(--main);color:#fff;white-space:nowrap;
+  box-shadow:0 6px 16px rgba(224,69,123,.28);transition:.22s;
+}
+.header-cta:hover{background:var(--main-dark);transform:translateY(-1px);}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 88% -10%,rgba(122,63,208,.16),transparent 62%),
+    radial-gradient(700px 360px at 6% 0%,rgba(224,69,123,.20),transparent 60%),
+    linear-gradient(180deg,#fff5f9,#fffafc);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;
+  align-items:center;padding:60px 0 56px;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);
+  padding:6px 14px;border-radius:999px;
+  font-size:13px;color:var(--main-dark);font-weight:600;
+  box-shadow:var(--shadow);margin-bottom:18px;
+}
+.hero-tag i{width:7px;height:7px;border-radius:50%;background:var(--main);display:block;}
+.hero h1{
+  font-size:clamp(28px,4.2vw,44px);line-height:1.28;
+  letter-spacing:-.5px;font-weight:800;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(120deg,#e0457b,#7a3fd0);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{
+  margin-top:18px;font-size:16.5px;color:var(--ink-2);max-width:560px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;
+  font-size:15px;font-weight:600;transition:.22s;border:1px solid transparent;
+}
+.btn-primary{background:var(--main);color:#fff;box-shadow:0 10px 22px rgba(224,69,123,.28);}
+.btn-primary:hover{background:var(--main-dark);transform:translateY(-2px);}
+.btn-ghost{background:#fff;color:var(--main-dark);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--main);background:var(--main-soft);}
+
+.hero-stats{
+  display:flex;gap:30px;margin-top:34px;flex-wrap:wrap;
+}
+.hero-stats div b{display:block;font-size:21px;color:var(--main-dark);}
+.hero-stats div span{font-size:13px;color:var(--ink-2);}
+
+.hero-panel{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;
+  padding:24px;box-shadow:0 18px 44px rgba(190,60,110,.12);
+}
+.hero-panel h2{
+  font-size:16px;margin-bottom:16px;display:flex;align-items:center;gap:9px;
+}
+.hero-panel h2::before{
+  content:"";width:4px;height:16px;border-radius:3px;background:var(--main);
+}
+.pick-list li{
+  display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);
+}
+.pick-list li:last-child{border-bottom:0;padding-bottom:0;}
+.pick-no{
+  width:26px;height:26px;flex:none;border-radius:8px;font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--accent-soft);color:var(--accent);
+}
+.pick-list li:nth-child(1) .pick-no{background:var(--main);color:#fff;}
+.pick-list li:nth-child(2) .pick-no{background:#ffb3cd;color:#8c1f47;}
+.pick-body b{display:block;font-size:14.5px;}
+.pick-body span{font-size:12.5px;color:var(--ink-2);}
+
+/* ---------- section base ---------- */
+.section{padding:62px 0;}
+.section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:20px;margin-bottom:30px;flex-wrap:wrap;
+}
+.section-head h2{
+  font-size:clamp(21px,2.6vw,27px);font-weight:800;letter-spacing:-.3px;
+}
+.section-head h2 small{
+  display:block;font-size:13px;font-weight:500;color:var(--main);
+  letter-spacing:2px;margin-bottom:6px;text-transform:uppercase;
+}
+.section-head p{color:var(--ink-2);font-size:14.5px;max-width:520px;}
+
+/* ---------- 分类 ---------- */
+.cat-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;
+}
+.cat-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 20px;transition:.24s;position:relative;overflow:hidden;
+}
+.cat-card::after{
+  content:"";position:absolute;right:-30px;bottom:-30px;width:90px;height:90px;
+  border-radius:50%;background:var(--main-soft);opacity:0;transition:.3s;
+}
+.cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#ffd0e0;}
+.cat-card:hover::after{opacity:1;}
+.cat-card .ico{
+  width:42px;height:42px;border-radius:12px;display:flex;align-items:center;
+  justify-content:center;font-size:20px;margin-bottom:14px;
+  background:var(--main-soft);
+}
+.cat-card h3{font-size:16.5px;margin-bottom:8px;position:relative;z-index:1;}
+.cat-card p{font-size:13.5px;color:var(--ink-2);position:relative;z-index:1;}
+
+/* ---------- 推荐剧集 ---------- */
+.drama-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;
+}
+.drama-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.24s;display:flex;flex-direction:column;
+}
+.drama-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(190,60,110,.13);}
+.drama-thumb{
+  height:132px;display:flex;align-items:flex-end;padding:16px;
+  color:#fff;font-weight:700;font-size:17px;letter-spacing:.5px;
+  position:relative;
+}
+.drama-thumb span{
+  position:relative;z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+.drama-thumb::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45));
+}
+.t1{background:linear-gradient(135deg,#ff8fb4,#b8285c);}
+.t2{background:linear-gradient(135deg,#7a9cf5,#3f3fb8);}
+.t3{background:linear-gradient(135deg,#ffc48a,#e07a3f);}
+.t4{background:linear-gradient(135deg,#7fd6c0,#2f8f7d);}
+.t5{background:linear-gradient(135deg,#b79cf5,#6a3fb8);}
+.t6{background:linear-gradient(135deg,#f58fa0,#c23f5a);}
+.drama-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column;}
+.drama-body h3{font-size:16.5px;margin-bottom:8px;}
+.drama-body p{font-size:13.8px;color:var(--ink-2);flex:1;}
+.drama-meta{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;
+}
+.chip{
+  font-size:12px;padding:3px 10px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent);font-weight:600;
+}
+.chip.pink{background:var(--main-soft);color:var(--main-dark);}
+
+/* ---------- 攻略 ---------- */
+.guide-layout{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start;
+}
+.guide-main{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px;
+}
+.guide-main h3{font-size:20px;margin-bottom:14px;}
+.guide-main p{color:var(--ink-2);font-size:15px;margin-bottom:16px;}
+.step-list{counter-reset:st;margin-top:8px;}
+.step-list li{
+  counter-increment:st;position:relative;padding:0 0 18px 46px;
+  border-left:2px solid var(--line);margin-left:14px;
+}
+.step-list li:last-child{border-left-color:transparent;padding-bottom:0;}
+.step-list li::before{
+  content:counter(st);position:absolute;left:-15px;top:0;
+  width:28px;height:28px;border-radius:50%;background:var(--main);color:#fff;
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.step-list b{display:block;font-size:15px;margin-bottom:4px;}
+.step-list span{font-size:13.8px;color:var(--ink-2);}
+
+.guide-aside{
+  display:flex;flex-direction:column;gap:18px;
+}
+.aside-box{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;
+}
+.aside-box h4{
+  font-size:15.5px;margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.aside-box h4::before{
+  content:"";width:4px;height:15px;border-radius:3px;background:var(--accent);
+}
+.aside-box ul li{
+  font-size:14px;color:var(--ink-2);padding:9px 0;border-bottom:1px dashed var(--line);
+  display:flex;gap:10px;
+}
+.aside-box ul li:last-child{border-bottom:0;}
+.aside-box ul li i{color:var(--main);font-style:normal;font-weight:700;}
+
+/* ---------- 资讯 ---------- */
+.news-band{background:#fff5f9;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.news-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;
+}
+.news-item{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;transition:.24s;
+}
+.news-item:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.news-item time{
+  font-size:12.5px;color:var(--main-dark);font-weight:600;letter-spacing:.5px;
+}
+.news-item h3{font-size:16px;margin:10px 0 8px;}
+.news-item p{font-size:13.8px;color:var(--ink-2);}
+
+/* ---------- 社区 ---------- */
+.topic-list{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;
+}
+.topic{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px;transition:.22s;
+}
+.topic:hover{border-color:#ffd0e0;background:#fffafc;}
+.topic-avatar{
+  width:38px;height:38px;flex:none;border-radius:11px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,#ff8fb4,#b8285c);
+}
+.topic:nth-child(2n) .topic-avatar{background:linear-gradient(135deg,#9db4f5,#3f3fb8);}
+.topic:nth-child(3n) .topic-avatar{background:linear-gradient(135deg,#8fd6c0,#2f8f7d);}
+.topic-body b{display:block;font-size:15px;margin-bottom:5px;}
+.topic-body p{font-size:13.5px;color:var(--ink-2);}
+.topic-tags{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap;}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:900px;margin:0 auto;}
+.faq-item{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  margin-bottom:12px;overflow:hidden;
+}
+.faq-q{
+  width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  padding:18px 22px;font-size:15.5px;font-weight:600;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  font-family:inherit;
+}
+.faq-q::after{
+  content:"+";font-size:20px;color:var(--main);font-weight:400;flex:none;
+  transition:.25s;
+}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .3s ease;
+  padding:0 22px;color:var(--ink-2);font-size:14.5px;
+}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:20px;}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:#2a2130;color:#cfc4d2;padding:52px 0 26px;margin-top:20px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;
+}
+.footer-brand b{color:#fff;font-size:18px;display:block;margin-bottom:12px;}
+.footer-brand p{font-size:13.5px;line-height:1.85;color:#a99bab;}
+.footer-col h4{color:#fff;font-size:14.5px;margin-bottom:14px;}
+.footer-col li{margin-bottom:9px;}
+.footer-col a{font-size:13.5px;color:#a99bab;transition:.2s;}
+.footer-col a:hover{color:#ff9dc0;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:20px;
+  font-size:12.8px;color:#8d8095;display:flex;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:34px;padding:44px 0;}
+  .guide-layout{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  .header-inner{flex-wrap:wrap;gap:12px;}
+  .main-nav{order:3;width:100%;}
+  .main-nav ul{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;}
+  .main-nav a{white-space:nowrap;}
+  .header-cta{display:none;}
+  .section{padding:46px 0;}
+  .hero-stats{gap:20px;}
+}
+@media (max-width:520px){
+  .footer-grid{grid-template-columns:1fr;}
+  .hero-actions .btn{width:100%;text-align:center;}
+  .guide-main{padding:22px;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">韩</span>
+      <span class="brand-text">
+        <b>韩剧必胜园地</b>
+        <span>追剧推荐 · 资讯交流</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="active" href="#top">首页</a></li>
+        <li><a href="#category">剧集分类</a></li>
+        <li><a href="#picks">热门推荐</a></li>
+        <li><a href="#guide">追剧攻略</a></li>
+        <li><a href="#news">剧集资讯</a></li>
+        <li><a href="#community">剧迷讨论</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta" href="#picks">开始找剧</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="hero-tag"><i></i>给韩剧爱好者的找剧与交流园地</span>
+        <h1>在<em>韩剧必胜园地</em>，把想看的韩剧一次找齐</h1>
+        <p class="lead">
+          面对数量庞大的韩剧资源，很多人卡在“不知道看什么”这一步。韩剧必胜园地按题材、篇幅和观剧节奏整理剧集线索，
+          提供选剧思路、追剧方法与剧迷讨论话题，帮你在有限时间里更快找到合口味的那一部。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#picks">浏览热门推荐</a>
+          <a class="btn btn-ghost" href="#guide">查看追剧攻略</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>8 大类</b><span>题材分类导航</span></div>
+          <div><b>6 个维度</b><span>选剧参考标准</span></div>
+          <div><b>持续更新</b><span>资讯与讨论话题</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h2>本周编辑精选方向</h2>
+        <ul class="pick-list">
+          <li>
+            <span class="pick-no">1</span>
+            <span class="pick-body">
+              <b>想轻松下饭</b>
+              <span>优先选择单集 60 分钟以内的都市轻喜剧</span>
+            </span>
+          </li>
+          <li>
+            <span class="pick-no">2</span>
+            <span class="pick-body">
+              <b>想跟着哭一场</b>
+              <span>家庭伦理与治愈系长篇更容易有情绪沉淀</span>
+            </span>
+          </li>
+          <li>
+            <span class="pick-no">3</span>
+            <span class="pick-body">
+              <b>想烧脑推理</b>
+              <span>悬疑犯罪类建议一次连看两集，线索更连贯</span>
+            </span>
+          </li>
+          <li>
+            <span class="pick-no">4</span>
+            <span class="pick-body">
+              <b>想补经典</b>
+              <span>从获奖与口碑长青作品入手，踩雷概率更低</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section class="section" id="category">
+    <div class="wrap">
+      <div class="section-head">
+        <h2><small>Categories</small>按题材快速定位</h2>
+        <p>不同题材的观剧体验差别很大。先想清楚自己当下想要的情绪，再挑类型，比盲目刷榜单更省时间。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="ico">💗</div>
+          <h3>浪漫爱情</h3>
+          <p>从初遇到重逢的完整情感线，适合想要轻快节奏与甜蜜氛围的观众。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🕵️</div>
+          <h3>悬疑犯罪</h3>
+          <p>案件推进与人物动机交织，注意留意伏笔，适合喜欢推理和反转的观众。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🏠</div>
+          <h3>家庭生活</h3>
+          <p>聚焦亲情、代际关系与日常琐事，篇幅通常较长，适合慢慢追。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🏢</div>
+          <h3>职场商战</h3>
+          <p>以行业竞争与个人成长为主线，节奏偏快，信息密度较高。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🩺</div>
+          <h3>医疗律政</h3>
+          <p>专业场景与人性抉择并行，单元结构与长线剧情常常交替出现。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🏯</div>
+          <h3>古装历史</h3>
+          <p>服化道与时代背景考究，人物关系复杂，建议按顺序观看。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">✨</div>
+          <h3>奇幻穿越</h3>
+          <p>设定驱动型作品，世界观需要一点耐心进入，进入后往往很上头。</p>
+        </article>
+        <article class="cat-card">
+          <div class="ico">🌿</div>
+          <h3>治愈成长</h3>
+          <p>节奏舒缓、情绪细腻，适合下班后放松或需要被安慰的时候。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门推荐 -->
+  <section class="section" id="picks" style="background:#fff5f9;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2><small>Recommend</small>值得优先尝试的观剧方向</h2>
+        <p>以下为按题材特征整理的观剧方向建议，帮助你根据当下需求选择，而不是简单罗列片名。</p>
+      </div>
+      <div class="drama-grid">
+        <article class="drama-card">
+          <div class="drama-thumb t1"><span>甜宠轻喜方向</span></div>
+          <div class="drama-body">
+            <h3>下班后的轻松解压选择</h3>
+            <p>这类剧通常单集时长友好、情节推进明快，适合通勤或睡前观看，不容易产生追剧压力。</p>
+            <div class="drama-meta">
+              <span class="chip pink">节奏轻快</span>
+              <span class="chip">适合下饭</span>
+              <span class="chip">情绪正向</span>
+            </div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-thumb t2"><span>悬疑推理方向</span></div>
+          <div class="drama-body">
+            <h3>需要动脑的高强度体验</h3>
+            <p>线索埋设密集，建议连续观看保持记忆连贯，中途断太久容易忘记关键人物关系。</p>
+            <div class="drama-meta">
+              <span class="chip">信息密集</span>
+              <span class="chip pink">适合连看</span>
+              <span class="chip">反转较多</span>
+            </div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-thumb t3"><span>家庭温情方向</span></div>
+          <div class="drama-body">
+            <h3>适合与家人一起看</h3>
+            <p>情感表达细腻，话题贴近生活，长辈与年轻观众都能找到共鸣点。</p>
+            <div class="drama-meta">
+              <span class="chip">合家观看</span>
+              <span class="chip">篇幅较长</span>
+              <span class="chip pink">情感细腻</span>
+            </div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-thumb t4"><span>治愈成长方向</span></div>
+          <div class="drama-body">
+            <h3>给情绪留一点缓冲</h3>
+            <p>节奏舒缓，画面与配乐往往更受重视，适合在压力较大的阶段观看。</p>
+            <div class="drama-meta">
+              <span class="chip pink">节奏舒缓</span>
+              <span class="chip">画面质感</span>
+              <span class="chip">适合独看</span>
+            </div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-thumb t5"><span>职场现实方向</span></div>
+          <div class="drama-body">
+            <h3>看人物如何在规则中成长</h3>
+            <p>行业背景扎实，人物目标明确，适合喜欢看博弈与抉择的观众。</p>
+            <div class="drama-meta">
+              <span class="chip">行业题材</span>
+              <span class="chip pink">人物立体</span>
+              <span class="chip">节奏紧凑</span>
+            </div>
+          </div>
+        </article>
+        <article class="drama-card">
+          <div class="drama-thumb t6"><span>古装年代方向</span></div>
+          <div class="drama-body">
+            <h3>沉浸式的时代氛围</h3>
+            <p>服化道与礼仪细节丰富，建议按播出顺序观看，避免情节理解断层。</p>
+            <div class="drama-meta">
+              <span class="chip">服化考究</span>
+              <span class="chip">关系复杂</span>
+              <span class="chip pink">建议顺序看</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 追剧攻略 -->
+  <section class="section" id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <h2><small>Guide</small>高效追剧的四步方法</h2>
+        <p>与其在推荐列表里反复滑动，不如先明确需求，再按步骤筛选，效率会高很多。</p>
+      </div>
+      <div class="guide-layout">
+        <div class="guide-main">
+          <h3>从需求出发的选剧流程</h3>
+          <p>韩剧题材跨度大，同一部作品在不同观众眼里评价可能完全相反。先确认自己的观看场景和情绪需求，再对照剧集特征筛选，能明显减少“看了两集弃剧”的情况。</p>
+          <ol class="step-list">
+            <li>
+              <b>先确定观看场景</b>
+              <span>是通勤碎片时间、周末整块时间，还是睡前放松？碎片时间更适合单元结构清晰、每集相对独立的作品。</span>
+            </li>
+            <li>
+              <b>再确定情绪需求</b>
+              <span>想被逗笑、想被感动，还是想被剧情牵着走？情绪目标明确后，题材范围会立刻缩小一半。</span>
+            </li>
+            <li>
+              <b>核对篇幅与更新状态</b>
+              <span>已完结作品适合一次性追完，连载中的作品需要评估自己能否接受每周等待的节奏。</span>
+            </li>
+            <li>
+              <b>参考多方评价再决定</b>
+              <span>优先看讨论中提到的具体优点与缺点，例如节奏、演技、结局处理，而不是只看一个总分。</span>
+            </li>
+          </ol>
+        </div>
+        <aside class="guide-aside">
+          <div class="aside-box">
+            <h4>选剧时容易忽略的点</h4>
+            <ul>
+              <li><i>·</i>单集时长差异大，60 分钟与 90 分钟的观感完全不同</li>
+              <li><i>·</i>部分作品前两集为铺垫期，节奏偏慢属正常现象</li>
+              <li><i>·</i>同一演员不同作品风格可能相差很大，别只看阵容</li>
+              <li><i>·</i>结局评价分歧大的作品，建议提前了解再决定是否入坑</li>
+            </ul>
+          </div>
+          <div class="aside-box">
+            <h4>观剧体验小建议</h4>
+            <ul>
+              <li><i>·</i>悬疑类尽量连看，避免线索记忆断裂</li>
+              <li><i>·</i>长篇幅家庭剧可设定每日固定集数，防止疲劳</li>
+              <li><i>·</i>同时追的剧控制在两部以内，观感更清晰</li>
+              <li><i>·</i>看完可以记录一句感受，方便日后回顾与推荐</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 资讯 -->
+  <section class="section news-band" id="news">
+    <div class="wrap">
+      <div class="section-head">
+        <h2><small>News</small>剧集资讯与行业动态</h2>
+        <p>关注播出安排、制作动向与演员新作信息，帮助你提前规划追剧节奏。</p>
+      </div>
+      <div class="news-grid">
+        <article class="news-item">
+          <time>播出安排</time>
+          <h3>如何看懂韩剧的播出周期</h3>
+          <p>多数作品采用每周两集的播出方式，也有一次性放出全集的模式。了解周期规律，能更好安排自己的追剧计划。</p>
+        </article>
+        <article class="news-item">
+          <time>制作动向</time>
+          <h3>题材趋势与创作方向观察</h3>
+          <p>近年来现实题材与类型融合作品增多，悬疑、职场与治愈系之间的边界越来越模糊，选择时不必拘泥于单一标签。</p>
+        </article>
+        <article class="news-item">
+          <time>演员动态</time>
+          <h3>关注演员新作的方法</h3>
+          <p>通过演员的作品列表梳理其风格变化，比单看某一部作品更容易判断是否符合自己的口味偏好。</p>
+        </article>
+        <article class="news-item">
+          <time>观看提示</time>
+          <h3>字幕与配音版本的选择</h3>
+          <p>不同版本在语气表达与细节呈现上存在差异，若在意台词细节，可优先选择字幕版本并留意翻译质量。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社区 -->
+  <section class="section" id="community">
+    <div class="wrap">
+      <div class="section-head">
+        <h2><small>Community</small>剧迷正在讨论</h2>
+        <p>交流是追剧乐趣的一部分。以下为常见讨论方向，欢迎围绕剧情、演技与观感展开理性交流。</p>
+      </div>
+      <div class="topic-list">
+        <article class="topic">
+          <span class="topic-avatar">剧</span>
+          <div class="topic-body">
+            <b>哪些剧适合第一次接触韩剧的人？</b>
+            <p>建议从题材门槛低、节奏明快的作品入手，先建立观剧习惯，再逐步尝试类型更复杂的作品。</p>
+            <div class="topic-tags"><span class="chip pink">入门推荐</span><span class="chip">新手友好</span></div>
+          </div>
+        </article>
+        <article class="topic">
+          <span class="topic-avatar">推</span>
+          <div class="topic-body">
+            <b>悬疑剧看到一半忘了线索怎么办？</b>
+            <p>可以回看关键集数或查看人物关系梳理，把主线案件与支线情节分开记录，理解会顺畅很多。</p>
+            <div class="topic-tags"><span class="chip">悬疑推理</span><span class="chip pink">观看技巧</span></div>
+          </div>
+        </article>
+        <article class="topic">
+          <span class="topic-avatar">感</span>
+          <div class="topic-body">
+            <b>结局争议大的作品还值得看吗？</b>
+            <p>结局评价分歧往往意味着作品在表达上有取舍。可以先了解争议点，再判断自己是否在意这部分。</p>
+            <div class="topic-tags"><span class="chip pink">观感讨论</span><span class="chip">结局</span></div>
+          </div>
+        </article>
+        <article class="topic">
+          <span class="topic-avatar">长</span>
+          <div class="topic-body">
+            <b>长篇幅家庭剧怎么追不容易累？</b>
+            <p>设定每日固定集数，配合人物关系图辅助记忆，遇到节奏偏慢的段落可以适度加快观看速度。</p>
+            <div class="topic-tags"><span class="chip">家庭剧</span><span class="chip pink">追剧节奏</span></div>
+          </div>
+        </article>
+        <article class="topic">
+          <span class="topic-avatar">演</span>
+          <div class="topic-body">
+            <b>如何判断一部剧的演技水平？</b>
+            <p>可以关注情绪转折处的处理是否自然、台词与肢体是否统一，以及配角是否同样立得住。</p>
+            <div class="topic-tags"><span class="chip">演技</span><span class="chip pink">观剧角度</span></div>
+          </div>
+        </article>
+        <article class="topic">
+          <span class="topic-avatar">荐</span>
+          <div class="topic-body">
+            <b>怎么向朋友推荐一部韩剧？</b>
+            <p>与其说“很好看”，不如说清楚题材、节奏和适合的观看场景，对方更容易判断是否合口味。</p>
+            <div class="topic-tags"><span class="chip pink">推荐方法</span><span class="chip">交流</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" style="background:#fff5f9;border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head" style="justify-content:center;text-align:center;">
+        <h2><small>FAQ</small>常见问题解答</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" type="button">韩剧必胜园地主要提供什么内容？</button>
+          <div class="faq-a">
+            <p>本站围绕韩剧的观看需求，整理题材分类、选剧方向、追剧方法、资讯动态与剧迷讨论话题，帮助观众更快找到适合自己的作品，并提升整体观剧体验。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">第一次看韩剧，应该从哪类题材开始？</button>
+          <div class="faq-a">
+            <p>建议从节奏明快、情节门槛较低的都市轻喜剧或治愈系作品入手。这类作品人物关系相对简单，容易建立观剧习惯，之后再尝试悬疑或古装等类型会更轻松。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">怎么判断一部剧是否适合自己？</button>
+          <div class="faq-a">
+            <p>可以先看题材标签、单集时长和整体篇幅，再结合讨论中提到的节奏与结局评价。重点关注具体描述而非笼统评分，判断会更准确。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">连载中的剧和已完结的剧怎么选？</button>
+          <div class="faq-a">
+            <p>如果希望一次看完、不被打断，优先选择已完结作品；如果享受每周讨论与期待感，连载中的作品体验会更好。两者各有乐趣，取决于你的时间安排。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">看剧时容易记不住人物关系怎么办？</button>
+          <div class="faq-a">
+            <p>可以在观看初期简单记录主要人物的身份与关系，尤其是悬疑和古装题材。连续观看、避免长时间中断，也能明显减少记忆负担。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">本站内容会持续更新吗？</button>
+          <div class="faq-a">
+            <p>会。分类结构、选剧方法、资讯方向和讨论话题都会随观众需求持续调整与补充，力求保持内容的实用性与可参考性。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <b>韩剧必胜园地</b>
+        <p>面向韩剧爱好者的推荐与交流站点，围绕题材分类、选剧方法、追剧攻略与剧迷讨论，提供清晰、实用的观剧参考。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#category">剧集分类</a></li>
+          <li><a href="#picks">热门推荐</a></li>
+          <li><a href="#guide">追剧攻略</a></li>
+          <li><a href="#news">剧集资讯</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>交流互动</h4>
+        <ul>
+          <li><a href="#community">剧迷讨论</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>观剧提示</h4>
+        <ul>
+          <li><a href="#guide">合理安排观看时间</a></li>
+          <li><a href="#guide">选择合适版本</a></li>
+          <li><a href="#faq">理性看待评价</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 韩剧必胜园地 · 内容仅供观剧参考与交流</span>
+      <span>请通过正规渠道观看影视内容，尊重版权</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    if(!btn) return;
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(other){
+        other.classList.remove('open');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+      }
+    });
+  });
+  if(items.length){
+    items[0].classList.add('open');
+  }
+})();
+</script>
+
+</body>
+  </html>
